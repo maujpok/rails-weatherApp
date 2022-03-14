@@ -1,0 +1,19 @@
+<div class="col-sm-6" style="width: 25%; margin-top: 2rem; margin-bottom: 1rem;">
+  <div class="card">
+    <div class="image">
+      <img src=<%= image(city.name) %> class="card-img-top" alt="city.name">
+    </div>
+    <div class="card-body">
+      <h5 class="card-title"><%= city.name.to_s.titleize %></h5>
+      <div class="temps" style="display: flex; flex-direction: column; margin-bottom: 15px;">
+        <span>Min: <%= @temp[city.key][:min] %></span>
+        <span>Max: <%= @temp[city.key][:max] %></span>
+        <span>Text: <%= @temp[city.key][:text] %></span>
+      </div>
+      <div class="buttons" style="display: flex; flex-direction: row; justify-content: space-around;">
+        <%= link_to "5-Day Forecast", city_path(city.id), class:'btn btn-primary' %>
+        <%= button_to 'Close', city, method: :delete, class: 'btn btn-warning' %>
+      </div>
+    </div>
+  </div>
+</div>

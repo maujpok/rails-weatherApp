@@ -1,0 +1,15 @@
+<div class="forecast">
+    <%= link_to 'Back', :back %>
+    
+    <div class="header">
+        <h1>5 Day Forecast of: <%= @city.name.to_s.titleize %></h1>
+    </div>
+    <hr>
+    
+    <div class="view">
+        <%= render 'cities/select' %>
+        <%= render 'cities/graphic' %>
+    </div>
+    <hr>
+
+</div>

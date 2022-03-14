@@ -1,0 +1,10 @@
+en:
+  app:
+    name: Weather App
+    copyright: © Mauricio Portillo
+  menu:
+    home: Home
+    about: About
+    add:
+      city_name: Add a city...
+      add_city: Go!

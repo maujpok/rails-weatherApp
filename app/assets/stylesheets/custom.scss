@@ -1,0 +1,132 @@
+@import 'bootstrap';
+
+.container {
+   margin-top: 2rem;
+}
+
+.navbar {
+    background-color:steelblue;
+    .navbar-brand {
+        margin-left: 5px;
+        &:hover {
+           color: lightgray;
+       }
+    }
+    .navbar-nav {
+       display: flex;
+       flex-direction: row;
+       justify-content: center;
+       .nav-item {
+           margin: 5px;
+           text-decoration: none !important;
+           color: #FFFFFF;
+           &:hover {
+               color: lightgray;
+           }
+       }
+   }
+   .form-inline {
+       display: flex;
+       flex-direction: row;
+       justify-content: center;
+       margin-right: 5px;
+       .form-control {
+           margin-right: 10px;
+       }
+   }
+}
+
+.form-inline {
+    input {
+        .btn {
+            -webkit-appearance: none;
+            text-decoration: none;
+            width: 7rem;
+            position: relative;
+            margin: auto;
+            outline: none;
+            transition: all .2s ease;
+            &:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: block;
+                border-radius: 28px;
+                background: rgba(white,.5);
+                width: 2rem;
+                height: 2.5rem;
+                transition: all .3s ease;
+            }
+            span {
+                position: relative;
+                color: #FFFFFF;
+                font-size: 16px;
+                line-height: 18px;
+                font-weight: 400;
+                letter-spacing: .15em;
+            }
+            &:hover {
+                span {
+                    transition: all .3s ease;
+                    color: steelblue;
+                }
+                &:before{
+                    width: 100%;
+                    background: rgba(#FFFFFF,1);
+                }
+            }
+            &:active {
+                transform: scale(.96);
+                outline: none;
+            }
+         }
+    }
+}
+
+.card {
+    border-radius: 1rem;
+    border: lightgray solid 0.1px;
+    box-shadow: 0px 0px 5px 0px steelblue ;
+ 
+    .image {
+        text-align: center;
+        .card-img-top {
+            text-align: center;
+            height: 10vw;
+            width: 95%;
+            border-radius: 0.5rem;
+            position: relative;
+            top: -15px;
+            image-rendering: pixelated;
+        }
+    }
+    .card-body {
+        display: flex;
+        flex-direction: column;
+        .card-title {
+            color: blue;
+        }
+    }
+ }
+
+ .view {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+    .select {
+        display: flex;
+        flex-direction: column;
+        background-color: red;
+        min-width: 50%;
+        min-height: 30vw;
+    }
+    .graphics {
+        display: flex;
+        flex-direction: column;
+        background-color: blue;
+        min-width: 50%;
+        min-height: 30vw;
+    }
+}
